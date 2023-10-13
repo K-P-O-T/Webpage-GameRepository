@@ -1,0 +1,45 @@
+// @mixin mediaTablet {
+//     @media screen and (max-width: $tablet) {
+//         @content;
+//     }
+// }
+
+
+@mixin mediaLaptop {
+    @media screen and (max-width: $laptop) {
+        @content;
+    }
+}
+
+@mixin mediaTablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mediaMobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin mediaPhone {
+    @media screen and (max-width: $phone) {
+        @content;
+    }
+}
+
+
+// !Include this code for adaptation
+
+// @include mediaLaptop {
+// }
+
+// @include mediaTablet {
+// }
+
+// @include mediaMobile {
+// }
+
+// @include mediaPhone {
+// }

@@ -1,0 +1,21 @@
+// base
+@import "./base/nullstyle.scss";
+@import "./fonts.scss";
+@import "./base/vars.scss";
+@import "./base/mixins.scss";
+@import "./base/base.scss";
+
+
+// blocks
+@import "./blocks/header.scss";
+@import "./blocks/nav-icon.scss";
+@import "./blocks/card.scss";
+@import "./blocks/nav.scss";
+// @import "./blocks/.XXXXXXX.scss";
+// @import "./blocks/.XXXXXXX.scss";
+// @import "./blocks/.XXXXXXX.scss";
+@import "./blocks/footer.scss";
+
+//libs
+// @import "./../../node_modules/swiper/swiper.scss"; // swiper styles
+// @import "./../../node_modules/swiper/modules/navigation.scss"; // swiper navigation styles

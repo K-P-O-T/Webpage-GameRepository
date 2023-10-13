@@ -1,0 +1,378 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: "Raleway-Regular";
+  background-color: #372C2E;
+  color: #FFFFFF;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+main {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container--sm {
+  max-width: 840px;
+}
+
+a {
+  color: #FFFFFF;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #DE9E48;
+  transition: color 0.2s ease;
+}
+
+.visually-hidden {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.none {
+  display: none !important;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.title-2 {
+  font-family: "PlayfairDisplay-Bold";
+  font-size: 36px;
+  color: #DE9E48;
+}
+@media screen and (max-width: 744px) {
+  .title-2 {
+    font-size: 28px;
+  }
+}
+
+.header__nav-btn {
+  position: fixed;
+  z-index: 11;
+  right: 15px;
+  top: 15px;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__top--mobile {
+  position: fixed;
+  background-color: #372C2E;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 99;
+  overflow: hidden;
+}
+.header__top--mobile .header__nav {
+  display: grid;
+  gap: 30px;
+  margin-right: 0;
+}
+.header__top--mobile .nav__list {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+.header__top--mobile .header__nav-btn {
+  position: fixed;
+  z-index: 11;
+  right: 15px;
+  top: 15px;
+}
+
+.header__nav {
+  display: none;
+}
+/* Nav Icon */
+.nav-icon-btn {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #fff;
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.nav-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.nav-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon--active {
+  background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+  transform: rotate(-45deg);
+}
+
+.card {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.card__body {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  perspective: 500px;
+  width: 430px;
+  height: 430px;
+}
+.card__title {
+  text-transform: uppercase;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 700;
+  word-spacing: 20px;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+.card__button {
+  padding: 10px 20px;
+  background-color: rgb(0, 51, 160);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  transition: all 0.2s ease-in;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+.card__button:hover {
+  background-color: rgb(36, 92, 212);
+  transition: all 0.2s ease-in;
+}
+.card__button:focus {
+  background-color: rgb(0, 52, 165);
+  border: 2px solid rgb(0, 0, 68);
+  transition: all 0.2s ease-in;
+}
+.card__item {
+  flex: 1 1 100px;
+  position: relative;
+  font-size: 50px;
+  background-color: rgb(222, 224, 231);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  transform: rotateY(180deg);
+  transition: all 0.2s ease-in;
+}
+.card__item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background-color: rgb(54, 69, 153);
+  transition: all 0.2s ease-in;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+.card__item.itemOpen {
+  transform: rotateY(0deg);
+}
+
+.itemOpen::after,
+.itemMatch::after {
+  transform: rotateY(180deg);
+}
+
+.nav__list {
+  display: flex;
+  gap: 30px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.nav__title {
+  font-size: 50px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}

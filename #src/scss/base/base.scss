@@ -1,0 +1,87 @@
+body {
+    font-family: $font-main; // change
+    background-color: $dark; // change
+    color: $white; // change
+    font-size: 16px;
+	overflow-x: hidden;
+
+	// &::-webkit-scrollbar-track {
+    //     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    //     border-radius: 10px;
+    //     background-color: #f1f1f1;
+    // }
+
+    // &::-webkit-scrollbar {
+    //     width: 12px;
+    //     background-color: transparent;
+    // }
+
+    // &::-webkit-scrollbar-thumb {
+    //     border-radius: 10px;
+    //     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    //     background-color: #c1c1c1;
+    // }
+}
+
+main{
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+	max-width: 1140px; // change
+	padding: 0 15px;
+	margin: 0 auto;
+
+	&--sm {
+		max-width: 840px; // change
+	}
+}
+
+a {
+    color: $white; // change
+    transition: color 0.2s ease;
+    &:hover {
+        color: $accent; // change
+        transition: color 0.2s ease;
+    }
+}
+
+.visually-hidden {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+    position: absolute;
+
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+}
+
+.none {
+    display: none !important;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+} // class for menu adaptation
+
+.title-2 {
+    font-family: $font-accent; // change
+    font-size: 36px;
+    color: $accent; // change
+
+    @include mediaTablet {
+        font-size: 28px; // change
+    }
+}

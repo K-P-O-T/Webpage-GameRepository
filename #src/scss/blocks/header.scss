@@ -1,0 +1,80 @@
+// === Add your style here ===
+// ===========================
+
+
+
+
+// ===================================
+// ===== menu btn and adaptation =====
+// ===================================
+
+.header__nav-btn {
+    position: fixed;
+    z-index: 11;
+    right: 15px;
+    top: 15px;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__top--mobile {
+    position: fixed;
+    background-color: $dark; // change me
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    z-index: 99;
+    overflow: hidden;
+
+    .header__nav {
+        display: grid;
+        gap: 30px;
+        margin-right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .header__nav-btn {
+        position: fixed;
+        z-index: 11;
+        right: 15px;
+        top: 15px;
+    }
+
+	// Add your open-menu adaptation code here
+
+}
+
+.header__nav {
+	display: none; // alt + вниз
+    @include mediaTablet { // change adaptation quire
+    }
+}
+
+.header__nav-btn {
+    // display: none;
+    @include mediaTablet { // change adaptation quire
+        // display: block;
+    }
+}
+
+
+// ===================================
+// ===== menu btn and adaptation =====
+// ===================================
