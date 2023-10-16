@@ -176,6 +176,6 @@ const cardGame = () => {
             }, 800);
         };
 
-        document.querySelector(".card__body").appendChild(box);
+        document.querySelector(".card__container").appendChild(box);
     }
 };

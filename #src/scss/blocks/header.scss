@@ -1,18 +1,33 @@
 // === Add your style here ===
 // ===========================
 
+.header {
+    background-color: $accent;
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        height: 50px;
+        padding: 0 10px;
+		
+    }
 
+    &__top {
+    }
 
+    &__nav {
+    }
+}
 
 // ===================================
 // ===== menu btn and adaptation =====
 // ===================================
 
 .header__nav-btn {
-    position: fixed;
-    z-index: 11;
-    right: 15px;
-    top: 15px;
+    // position: fixed;
+    // z-index: 11;
+    // right: 15px;
+    // top: 15px;
 }
 
 .header__top {
@@ -57,23 +72,23 @@
         top: 15px;
     }
 
-	// Add your open-menu adaptation code here
-
+    // Add your open-menu adaptation code here
 }
 
 .header__nav {
-	display: none; // alt + вниз
-    @include mediaTablet { // change adaptation quire
+    display: none; // alt + вниз
+    @include mediaTablet {
+        // change adaptation quire
     }
 }
 
 .header__nav-btn {
     // display: none;
-    @include mediaTablet { // change adaptation quire
+    @include mediaTablet {
+        // change adaptation quire
         // display: block;
     }
 }
-
 
 // ===================================
 // ===== menu btn and adaptation =====
